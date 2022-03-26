@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 62.5%;
+  background: #031321;
+  position: relative;
+}
+
+.quiz-head{
+  padding-top: 1rem;
+  font-size: 2.7rem;
+  color: #2196f3;
+  font-weight: 900;
+  letter-spacing: .2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.wrap{
+  width: 75%;
+  padding: .5rem 1rem 1rem 1rem;
+  background-color: #011f3a;
+  margin: auto;
+  position: relative;
+}
+
+
+.scoreBoard span, .scoreBoard{
+  color: white;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+form h1{
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+}
+
+.all_options{
+  background: #001222;
+  color: white;
+  width: 85%;
+  margin: auto;
+  padding: .6rem .2rem;
+}
+
+.button{
+  margin: 1rem 0 1rem 0;
+  text-align: center;
+}
+
+.submit-btn{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: .7rem .8rem;
+  background: #255784;
+  letter-spacing: .1rem;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: .2rem;
+  margin: auto;
+  width: 8rem;
+}
+
+.submit-btn:hover{
+  background-color: #001222;
+}
+
+.option {
+  font-size: 1.1rem;
+  margin: .6rem 1.5rem;
+  transition: 0.3s ease background-color;
+  border-radius: 4px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  height: 2.5rem;
+}
+.option label {
+  width: 100%;
+  margin-left: 1rem;
+  cursor: pointer;
+  justify-self: stretch;
+  font-size: 1.3rem;
+}
+.option:hover {
+  background-color: #255784;
+}
+.option input[type="radio"]:checked + label {
+  color: rgb(0, 238, 255);
+}
+.option.correct {
+  background-color: green;
+}
+
+form button,
+.result-overlay button {
+  width: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Montserrat";
+  background-color: #255784;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+}
+button:hover,
+.result-overlay button:hover {
+  background-color: #031321;
+}
+
+.finish-btn,
+.next-btn {
+    width: 10rem;
+  display: inline-block;
+  margin: .5rem 2rem;
+}
+.finish-btn {
+  border-right: 1px solid black;
+}
+.next-btn {
+  border-left: 1px solid black;
+}
+
+.result-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #011f3a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.final-result {
+  font-size: 6rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #011f3a;
+  background: url(./Infinity-1s-200px.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h3{
+  font-size: 4rem;
+  color: #255784;
+  margin-bottom: 2rem;
+}
+
+a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.return{
+  position: absolute;
+  padding: .5rem 1rem;
+  background-color: black;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  right: 2rem;
+  top: 1rem;
+}
+
+.return:hover{
+  background-color: #2196f3;
+}
+
+@media screen and (max-width: 1024px){
+  .quiz-head{
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .return{
+    padding: .3rem .7rem;
+  }
+
+  a{
+    font-size: .85rem;
+  }
+
+  .wrap{
+    width: 85%;
+  }
+
+  .scoreBoard{
+    font-size: 1.2rem;
+  }
+  .scoreBoard span{
+    font-size: 1.2rem;
+}
+form h1{
+  font-size: 1.4rem;
+}
+
+.all_options{
+  padding: .3rem 0;
+}
+
+.option{
+  height: 2rem;
+}
+
+.option label{
+  font-size: 1.1rem;
+}
+}
+
+@media screen and (max-width: 600px){
+  .return{
+    right: .5rem;
+    top: .5rem;
+  }
+
+  .quiz-head{
+    margin-bottom: 3rem;
+  }
+
+  .wrap{
+    width: 95%;
+  }
+
+  .all_options{
+    width: 95%;
+  }
+
+  form h1{
+    font-size: 1.2rem;
+  }
+
+  .option{
+    margin: .3rem .8rem;
+  }
+
+  .option label{
+    margin-left: .5rem;
+    font-size: .8rem;
+  }
+  .submit-btn{
+    font-size: 1rem;
+    padding: .6rem .5rem;
+    width: 6rem;
+  }
+  form button, .result-overlay button {
+    padding: .6rem .5rem;
+    font-size: 1rem;
+}
+
+.finish-btn, .next-btn {
+    width: 6rem;
+    display: inline;
+    margin: 0.5rem 2rem;
+}
+}
